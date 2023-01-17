@@ -1,0 +1,18 @@
+<div class="answer" *ngFor="let answer of answers; index as i;">
+    {{ i + 1 }}.
+    {{ answer.text}}
+</div>
+<form class="row-radio">
+    <div *ngFor="let answer of answers; index as i;">
+        <div class="answer">
+            <label for="inp">{{ i+1 }}.</label>
+            <input 
+                type="radio" 
+                name="ans"
+                [id]="answer.id.toString()"  
+                [value]="answer.isTrue" 
+                (click)="inputChecked(answer.id.toString())" 
+                [checked]="checked(answer.id.toString())"/>
+        </div>
+    </div>
+</form>

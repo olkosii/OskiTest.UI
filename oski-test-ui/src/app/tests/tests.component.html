@@ -1,0 +1,26 @@
+
+<div class="center">
+  <h1>Welcome to the Test Club!</h1>
+</div>
+<div class="container">
+  <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+    <mat-card class="card card-block" *ngFor="let test of tests">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <img mat-card-image [src]="test.imageUrl" alt="Photo of test">
+          </div>
+          <div class="container">
+            <mat-card-title >{{ test.name }}</mat-card-title>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="center">
+            {{ (test.overview.length > 20) ?  (test.overview | slice:0:20)+'...':(test.overview) }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="center-end">
+          <a mat-button [routerLink]="['/tests/overview', test.id]">Start</a>
+        </mat-card-actions>
+      </mat-card>
+ </div>
+</div>

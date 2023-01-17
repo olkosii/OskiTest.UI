@@ -1,0 +1,19 @@
+.answer {
+    font-size: 20px;
+    font-weight: 400;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    padding: 10px 15px 10px 20px;
+}
+
+.row-radio{
+    display: flex;
+    flex-direction: row;
+}
+
+input{
+    accent-color: rgb(111, 36, 111);
+    transform: scale(1.3); 
+}

@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-card class="card card-block">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <img mat-card-image [src]="test.imageUrl" alt="Photo of test">
+          </div>
+          <div class="container">
+            <mat-card-title >Your results for test: {{ test.name }}</mat-card-title>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="center">
+                You correctly answered: {{ result }} out of 4 questions
+            </p>
+        </mat-card-content>
+        <mat-card-actions class="center-end">
+          <a mat-button routerLink="/" (click)="cleanStorage()">Back</a>
+        </mat-card-actions>
+    </mat-card>
+</div>
+

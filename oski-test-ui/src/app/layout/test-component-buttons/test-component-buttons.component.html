@@ -1,0 +1,17 @@
+<a (click)="increaseQuestionId()" mat-raised-button [routerLink]="['/tests', testId]" 
+    *ngIf="questionId === 1; else notFirstTest">Next question
+</a>
+
+<ng-template  #notFirstTest>
+    <div *ngIf="questions.length > questionId; else fisishButtons">
+        <a (click)="decreaseQuestionId()" mat-raised-button
+            [routerLink]="['/tests', testId]" >Previous question</a>
+        <a (click)="increaseQuestionId()" mat-raised-button
+            [routerLink]="['/tests', testId]" >Next question</a>
+    </div>
+</ng-template>
+
+<ng-template #fisishButtons>
+    <a (click)="decreaseQuestionId()" mat-raised-button [routerLink]="['/tests', testId]">Previous question</a>
+    <a mat-raised-button [routerLink]="['/tests/finished', testId]">Finish</a>
+</ng-template>
